@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .window_pop{
+            width: 200px;
+            border: 10px solid lightcoral;
+            padding: 20px 0;
+        }
+        .window_pop a{
+            display: block;            
+        }
+    </style>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".window_pop").click(function(){
+                winopen();
+            })//window_pop").click
+
+            function winopen(){
+                window.open("mobilehover.html", "_blank", "width=500, height=600, left=100, top=200, location=no") 
+                // 윈도우 팝업은 파일이 만들어져 있어야함
+                // 연결할 파일명을써 주는데 지금 문서는 같은 경로에 있어서 바로 적어준 것
+
+                // "_blank" 새창열기(기본값)
+                // "_parent" 부모 프레임에서 열기
+                // "_self" 현재 프레임에서 열기
+                // "_top" 맨 처음 로드된 프레임으로 열기
+
+                //첫번째 두번쨰 속성만 ""이후에 적어주고 
+                // 3번째 속성에는 크기나 위치 등은 지정해주는데, 같은 속성으로 여겨서 같은"" 안에 넣어준다
+
+                //location은 팝업창의 주소 (no는 수정 불가하다는 의미)
+            }//winopen
+
+
+
+        })//jquery
+    </script>
+</head>
+<body>
+    <div class="window_pop"><a href="#">윈도우 팝업</a></div>
+</body>
+</html>
